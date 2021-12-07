@@ -15,7 +15,6 @@
   <a href="#contact">Contact</a> •
   <a href="#license">License</a>
 </p>
-<p align="center">![screenshot](https://media.istockphoto.com/vectors/browser-window-web-interface-mock-screen-internet-document-mockup-vector-id1133621662?k=20&m=1133621662&s=170667a&w=0&h=Lc1cU5zZwKKrB4K3WLgAq3muTn9SSxnORCK_tl-x7wA=)</p>
 
 ## Features
 
