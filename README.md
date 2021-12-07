@@ -16,15 +16,14 @@
   <a href="#license">License</a>
 </p>
 
-![screenshot](https://cdn.pixabay.com/photo/2017/09/22/01/13/gui-2774166_960_720.pnghttps://cdn.pixabay.com/photo/2017/09/22/01/13/gui-2774166_960_720.png)
+![screenshot](https://media.istockphoto.com/vectors/browser-window-web-interface-mock-screen-internet-document-mockup-vector-id1133621662?k=20&m=1133621662&s=170667a&w=0&h=Lc1cU5zZwKKrB4K3WLgAq3muTn9SSxnORCK_tl-x7wA=)
 
 ## Features
 
-* Find your SAFTIS ip-address
-* Documentation of SAFETIS commands included
-* Command prompt based program
-* The ability to ping SAFETIS cameras
-* Fully standalone program
+* ???
+* ???
+* ???
+* ???
 
 ## How To Use
 
