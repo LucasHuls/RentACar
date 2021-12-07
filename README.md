@@ -1,0 +1,2 @@
+# RentACar
+The client, Mr. Jansen, has taken over the Rent-a-Car car rental company. Mr Jansen Jansen wants to enter the top segment of car rental with Rent-a-Car. This means that the bar This means that the bar is set very high for quality and service to the customer. To achieve this goal a thorough reorganisation and modernisation of Rent-a-Car is necessary. To improve the service and at the same time the name recognition, Mr. Jansen wants to create a website. created.
