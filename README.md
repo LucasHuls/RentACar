@@ -55,4 +55,4 @@ This software uses the following open source packages:
 ## License
 
 > [Portfolio](https://lucashuls.nl) &nbsp;&middot;&nbsp;
-> GitHub [@LucasHuls](https://github.com/LucasHuls) &nbsp;&middot;&nbsp;
+> [@LucasHuls](https://github.com/LucasHuls) &nbsp;&middot;&nbsp;
