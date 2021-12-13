@@ -1,0 +1,6 @@
+﻿<tr>
+                <td>@car.Kenteken</td>
+                <td>@car.Merk</td>
+                <td>@car.Type</td>
+                <td>@car.Dagprijs</td>
+            </tr>

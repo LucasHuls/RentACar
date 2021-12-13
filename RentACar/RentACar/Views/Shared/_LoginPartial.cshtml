@@ -1,0 +1,87 @@
+﻿@inject Microsoft.AspNetCore.Identity.SignInManager<RentACar.Models.ApplicationUser> signInManager
+
+@if (signInManager.IsSignedIn(User)) // User is signed in
+{
+    @if (User.Identity.IsAuthenticated)
+    {
+        @if (User.IsInRole(RentACar.Utility.Helper.Admin)) // Checks if the user is 'beheerder'
+        {
+            <ul class="nav navbar-nav">
+                <li>
+                    <a id="loginLink" class="nav-link" asp-action="" asp-controller="Home">Home</a>
+                </li>
+                <li>
+                    <a id="loginLink" class="nav-link" asp-action="Allcars" asp-controller="Car">Huren</a>
+                </li>
+                <li>
+                    <a id="loginLink" class="nav-link" asp-action="Addcar" asp-controller="Car">Toevoegen</a>
+                </li>
+                <li>
+                    <a id="loginLink" class="nav-link" asp-action="Contact" asp-controller="Home">Contact</a>
+                </li>
+            </ul>
+            <div>
+                <form method="post" id="logoutForm" asp-action="Logoff" asp-controller="Account" class="form-inline">
+                    <ul class="nav navbar-nav">
+                        <li><a class="nav-link" asp-action="Profile" asp-controller="Account">Welkom, @User.Identity.Name</a></li>
+                        <li>
+                            <button type="submit" class="btn btn-outline-light">Uitloggen</button>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        }
+
+        @if (User.IsInRole(RentACar.Utility.Helper.User)) // Checks if the user is 'gebruiker'
+        {
+            <ul class="nav navbar-nav">
+                <li>
+                    <a id="loginLink" class="nav-link" asp-action="" asp-controller="Home">Home</a>
+                </li>
+                <li>
+                    <a id="loginLink" class="nav-link" asp-action="Allcars" asp-controller="Car">Huren</a>
+                </li>
+                <li>
+                    <a id="loginLink" class="nav-link" asp-action="Contact" asp-controller="Home">Contact</a>
+                </li>
+            </ul>
+            <div>
+                <form method="post" id="logoutForm" asp-action="Logoff" asp-controller="Account" class="form-inline">
+                    <ul class="nav navbar-nav">
+                        <li><a class="nav-link" asp-action="Profile" asp-controller="Account">Welkom, @User.Identity.Name</a></li>
+                        <li>
+                            <button type="submit" class="btn btn-outline-light">Uitloggen</button>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        }
+    }
+}
+else
+{
+    <ul class="nav navbar-nav">
+        <li>
+            <a id="loginLink" class="nav-link" asp-action="" asp-controller="Home">Home</a>
+        </li>
+        <li>
+            <a id="loginLink" class="nav-link" asp-action="allCcars" asp-controller="Car">Huren</a>
+        </li>
+        <li>
+            <a id="loginLink" class="nav-link" asp-action="Addcar" asp-controller="Car">Toevoegen</a>
+        </li>
+        <li>
+            <a id="loginLink" class="nav-link" asp-action="Contact" asp-controller="Home">Contact</a>
+        </li>
+    </ul>
+    <div>
+        <ul class="nav navbar-nav">
+            <li>
+                <a id="loginLink" class="nav-link" asp-action="Login" asp-controller="Account">Inloggen</a>
+            </li>
+            <li>
+                <a id="loginLink" class="nav-link" asp-action="Register" asp-controller="Account">Registreren</a>
+            </li>
+        </ul>
+    </div>
+}

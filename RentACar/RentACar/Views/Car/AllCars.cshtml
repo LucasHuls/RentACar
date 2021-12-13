@@ -1,0 +1,36 @@
+﻿@model RentACar.Models.ViewModels.CarViewModel
+@inject Microsoft.AspNetCore.Identity.SignInManager<RentACar.Models.ApplicationUser> signInManager
+
+<h2>Alle Auto's'</h2>
+
+<div class="container">
+    <div class="row justify-content-center">
+        @foreach (var car in ViewBag.Vehicles)
+        {
+            string cardimage = car.Merk + ".png";
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="~/img/CarBrands/@cardimage" height="300" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">@car.Merk - @car.Type</h5>
+                        <p class="card-text">
+                            <strong>Kenteken: </strong>@car.Kenteken <br />
+                            <strong>Onderhoud: </strong>???
+                        </p>
+                        <a href="#" class="btn btn-primary">Reserveer</a>
+                        @if (signInManager.IsSignedIn(User)) // User is signed in
+                        {
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                @if (User.IsInRole(RentACar.Utility.Helper.Admin)) // Checks if the user is 'beheerder'
+                                {
+                                    <a href="#" class="btn btn-primary">Verwijderen</a>
+                                }
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
